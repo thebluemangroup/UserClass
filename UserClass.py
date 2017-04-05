@@ -21,5 +21,5 @@ class User():
 
     def user_recall(self):
         for counter in range(1, self.r_sheet.nrows):
-            if self.r_sheet.cell(counter, 6) == self.FPSID:
+            if self.r_sheet.cell(counter, 6) == self.ID:
                 self.working_row = counter
