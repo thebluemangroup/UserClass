@@ -14,7 +14,7 @@ class User():
         self.user_volume = None
         self.working_row = None
         self.ID = FPSID
-        self.rb = xlrd.open_workbook('CoffeeUsers.xlsx')
+        self.rb = xlrd.open_workbook('UserData.xlsx')
         self.r_sheet = self.rb.sheet_by_index(0)
         self.wb = copy(self.rb)
         self.w_sheet = self.wb.get_sheet(0)
