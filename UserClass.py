@@ -1,6 +1,6 @@
 import xlwt
 import xlrd
-import xlutils
+from xlutils.copy import copy
 class User():
     """
     User class, responsible for storing and recalling user information.
@@ -13,8 +13,10 @@ class User():
         self.user_strength = None
         self.user_volume = None
         self.ID = FPSID
-        rb = xlrd.open_workbook('CoffeeUsers.xlsx')
-        wb = copy(rb).get
+        self.rb = xlrd.open_workbook('CoffeeUsers.xlsx')
+        self.r_sheet = self.rb.sheet_by_index(0)
+        self.wb = copy(self.rb)
+        self.w_sheet = self.wb.get_sheet(0)
 
     def user_recall(self):
         self.user_first_name =
