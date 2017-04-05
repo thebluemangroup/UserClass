@@ -12,6 +12,7 @@ class User():
         self.user_status = None
         self.user_strength = None
         self.user_volume = None
+        self.working_row = None
         self.ID = FPSID
         self.rb = xlrd.open_workbook('CoffeeUsers.xlsx')
         self.r_sheet = self.rb.sheet_by_index(0)
@@ -19,4 +20,6 @@ class User():
         self.w_sheet = self.wb.get_sheet(0)
 
     def user_recall(self):
-        self.user_first_name =
+        for counter in range(1, self.r_sheet.nrows):
+            if self.r_sheet.cell(counter, 6) == self.FPSID:
+                self.working_row = counter
