@@ -24,5 +24,6 @@ class User():
         for counter in range(1, self.r_sheet.nrows-1):
             if self.r_sheet.cell(counter, 6) == self.ID:
                 self.working_row = counter
+                counter = self.r_sheet.nrows
                 print(str(self.working_row))
                 print(str(counter))
