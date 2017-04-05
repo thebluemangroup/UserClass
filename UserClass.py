@@ -20,6 +20,7 @@ class User():
         self.w_sheet = self.wb.get_sheet(0)
 
     def user_recall(self):
+        print(str(self.r_sheet.nrows))
         for counter in range(1, self.r_sheet.nrows):
             if self.r_sheet.cell(counter, 6) == self.ID:
                 self.working_row = counter
