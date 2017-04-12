@@ -78,6 +78,10 @@ class User():
         #Not yet implemented
         return
 
+    def user_update(self):
+        #Not yet implemented
+        return
+
 if __name__ == "__main__":
     test_id = int(input('ID to test: '))
     from UserClass import User
